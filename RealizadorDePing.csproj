@@ -1,0 +1,41 @@
+﻿<!--Linea para agregar el SDK de las vistas Razor-->
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<!--Tambien se debe habilitar en esta parte-->
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<!--Se desavilita el generador de usings-->
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<!--Se habilita el uso de windows form-->
+		<UseWindowsForms>true</UseWindowsForms>
+		<!--Id de los secretos-->
+		<!--Linea para agregar soporte a las vistas razor-->
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	  <UserSecretsId>408015a8-4317-4df6-acfc-5a62cba7b101</UserSecretsId>
+	  <UseWPF>True</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+		
+		<!--Importante tener esta libreria para que se pueda usar los constructores de interpretacion de razor-->
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+		<PackageReference Include="Razor.Templating.Core" Version="1.8.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EditorConfigFiles Remove="C:\Users\danie\source\repos\RealizadorDePing\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="C:\Users\danie\source\repos\RealizadorDePing\.editorconfig" />
+	</ItemGroup>
+
+</Project>
