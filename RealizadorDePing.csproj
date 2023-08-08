@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<!--Tambien se debe habilitar en esta parte-->
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<!--Se desavilita el generador de usings-->
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<!--Se habilita el uso de windows form-->
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ExcelDataReader" Version="3.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Readme.md">
+	    <Generator>TextTemplatingFileGenerator</Generator>
+	    <LastGenOutput>Readme.txt</LastGenOutput>
+	  </None>
+	  <None Update="Readme.txt">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Readme.md</DependentUpon>
+	  </None>
+	</ItemGroup>
+
+</Project>
